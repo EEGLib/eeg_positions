@@ -154,7 +154,7 @@
     <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
 
 
-<span class="k">def</span> <span class="nf">_plot_2d_head</span><span class="p">(</span><span class="n">radius_inner_contour</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">_plot_2d_head</span><span class="p">(</span><span class="n">radius_inner_contour</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show_axis</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Plot a head in 2D.</span>
 
 <span class="sd">    Parameters</span>
@@ -164,6 +164,8 @@
 <span class="sd">        contour line. Defaults to None, not drawing a circle. Can instead also</span>
 <span class="sd">        be conveniently set to ``eeg_positions.config.RADIUS_INNER_CONTOUR``,</span>
 <span class="sd">        which is the Fpz-T8-Oz-T7 contour line.</span>
+<span class="sd">    show_axis : bool</span>
+<span class="sd">        Whether or not to show the coordinate system x- and y-axes. Defaults to False.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -198,15 +200,33 @@
     <span class="n">nose_base_l</span> <span class="o">=</span> <span class="n">_get_coords_on_circle</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="n">head_radius</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="n">nose_width</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">nose_base_r</span> <span class="o">=</span> <span class="n">_get_coords_on_circle</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="n">head_radius</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="n">nose_width</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">nose_tip</span> <span class="o">=</span> <span class="mf">1.1</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">nose_base_l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">nose_base_l</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">nose_tip</span><span class="p">),</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">nose_base_r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">nose_base_r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">nose_tip</span><span class="p">),</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">nose_base_l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">nose_base_l</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">nose_tip</span><span class="p">),</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">nose_base_r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">nose_base_r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">nose_tip</span><span class="p">),</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span><span class="p">)</span>
 
-    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">ymin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">ymax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">linestyles</span><span class="o">=</span><span class="s2">&quot;dotted&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span>
+        <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">xmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">xmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">linestyles</span><span class="o">=</span><span class="s2">&quot;dotted&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
 
-    <span class="c1"># Adjust limits:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="n">head_radius</span> <span class="o">*</span> <span class="mf">1.6</span><span class="p">,</span> <span class="n">head_radius</span> <span class="o">*</span> <span class="mf">1.6</span><span class="p">])</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="n">head_radius</span> <span class="o">*</span> <span class="mf">1.6</span><span class="p">,</span> <span class="n">head_radius</span> <span class="o">*</span> <span class="mf">1.6</span><span class="p">])</span>
+    <span class="c1"># Adjust limits</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="n">head_radius</span> <span class="o">*</span> <span class="mf">1.1</span><span class="p">,</span> <span class="n">head_radius</span> <span class="o">*</span> <span class="mf">1.1</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="n">head_radius</span> <span class="o">*</span> <span class="mf">1.1</span><span class="p">,</span> <span class="n">head_radius</span> <span class="o">*</span> <span class="mf">1.1</span><span class="p">])</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">set_tight_layout</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">show_axis</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
 
     <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
 
@@ -248,23 +268,23 @@
     <span class="n">dim</span> <span class="o">=</span> <span class="s2">&quot;3d&quot;</span> <span class="k">if</span> <span class="s2">&quot;z&quot;</span> <span class="ow">in</span> <span class="n">coords</span><span class="o">.</span><span class="n">columns</span> <span class="k">else</span> <span class="s2">&quot;2d&quot;</span>
 
     <span class="c1"># update kwargs</span>
-    <span class="n">scatter_settings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">scatter_settings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
     <span class="n">scatter_settings</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">scatter_kwargs</span><span class="p">)</span>
-    <span class="n">text_settings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">text_settings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
     <span class="n">text_settings</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">text_kwargs</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="s2">&quot;2d&quot;</span><span class="p">:</span>
         <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">_plot_2d_head</span><span class="p">(</span><span class="n">RADIUS_INNER_CONTOUR</span><span class="p">)</span>
 
-        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coords</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-            <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">scatter_settings</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coords</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">],</span> <span class="n">zorder</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="o">**</span><span class="n">scatter_settings</span><span class="p">)</span>
             <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">text_settings</span><span class="p">)</span>
 
     <span class="k">else</span><span class="p">:</span>
         <span class="k">assert</span> <span class="n">dim</span> <span class="o">==</span> <span class="s2">&quot;3d&quot;</span>
         <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">_plot_spherical_head</span><span class="p">()</span>
 
-        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coords</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coords</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
             <span class="n">ax</span><span class="o">.</span><span class="n">scatter3D</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;z&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">scatter_settings</span><span class="p">)</span>
             <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;z&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">text_settings</span><span class="p">)</span>
 
