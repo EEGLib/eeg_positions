@@ -92,10 +92,10 @@
 
 <span class="kn">import</span> <span class="nn">ast</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">distutils.version</span> <span class="kn">import</span> <span class="n">LooseVersion</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">packaging.version</span> <span class="kn">import</span> <span class="n">Version</span>
 
 <span class="kn">from</span> <span class="nn">eeg_positions.config</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">ACCEPTED_EQUATORS</span><span class="p">,</span>
@@ -559,7 +559,7 @@
                 <span class="sa">f</span><span class="s2">&quot;You need to update your mne installation. Version </span><span class="si">{</span><span class="n">MNE_REQUIREMENT</span><span class="si">}</span><span class="s2"> &quot;</span>
                 <span class="sa">f</span><span class="s2">&quot;or higher is required, but you have </span><span class="si">{</span><span class="n">mne_version</span><span class="si">}</span><span class="s2">.&quot;</span>
             <span class="p">)</span>
-            <span class="k">if</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="n">mne_version</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="n">MNE_REQUIREMENT</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">Version</span><span class="p">(</span><span class="n">mne_version</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">Version</span><span class="p">(</span><span class="n">MNE_REQUIREMENT</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
         <span class="c1"># now convert to DigMontage</span>
