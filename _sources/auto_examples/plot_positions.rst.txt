@@ -24,25 +24,11 @@ Plot electrode positions
 
 .. currentmodule:: eeg_positions
 
-.. GENERATED FROM PYTHON SOURCE LINES 8-11
-
-.. code-block:: default
-
-    # Copyright (c) 2018-2022, Stefan Appelhoff
-    # BSD-3-Clause
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 12-13
+.. GENERATED FROM PYTHON SOURCE LINES 10-11
 
 We need to import some functions.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-16
+.. GENERATED FROM PYTHON SOURCE LINES 11-14
 
 .. code-block:: default
 
@@ -56,12 +42,12 @@ We need to import some functions.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-19
+.. GENERATED FROM PYTHON SOURCE LINES 15-17
 
 Get the electrode positions!
 Let's start with the basic 10-20 system in 2 dimensions (``"x"`` and ``"y"``).
 
-.. GENERATED FROM PYTHON SOURCE LINES 19-28
+.. GENERATED FROM PYTHON SOURCE LINES 17-26
 
 .. code-block:: default
 
@@ -143,13 +129,13 @@ Let's start with the basic 10-20 system in 2 dimensions (``"x"`` and ``"y"``).
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-32
+.. GENERATED FROM PYTHON SOURCE LINES 27-30
 
 Now let's plot these coordinates.
 We can supply some style arguments to :func:`eeg_positions.plot_coords` to control
 the color of the scatter dots, and the text annotations.
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-40
+.. GENERATED FROM PYTHON SOURCE LINES 30-38
 
 .. code-block:: default
 
@@ -181,13 +167,13 @@ the color of the scatter dots, and the text annotations.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-44
+.. GENERATED FROM PYTHON SOURCE LINES 39-42
 
 Notice in the above plot, that the "landmarks" are there: ``NAS``, ``LPA``,
 and ``RPA``. We can drop these by passing the ``drop_landmarks=True`` to
 :func:`get_elec_coords`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 44-59
+.. GENERATED FROM PYTHON SOURCE LINES 42-57
 
 .. code-block:: default
 
@@ -226,11 +212,11 @@ and ``RPA``. We can drop these by passing the ``drop_landmarks=True`` to
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-61
+.. GENERATED FROM PYTHON SOURCE LINES 58-59
 
 We can also plot in 3D. Let's pick a system with more electrodes now.
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-73
+.. GENERATED FROM PYTHON SOURCE LINES 59-71
 
 .. code-block:: default
 
@@ -266,7 +252,7 @@ We can also plot in 3D. Let's pick a system with more electrodes now.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-77
+.. GENERATED FROM PYTHON SOURCE LINES 72-75
 
 When using these commands from an interactive Python session, try to set
 the Ipython magic `%matplotlib qt`, which will allow you to freely view the 3d

@@ -24,25 +24,11 @@ Get specific electrodes and use aliases
 
 .. currentmodule:: eeg_positions
 
-.. GENERATED FROM PYTHON SOURCE LINES 8-11
-
-.. code-block:: default
-
-    # Copyright (c) 2018-2022, Stefan Appelhoff
-    # BSD-3-Clause
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 12-13
+.. GENERATED FROM PYTHON SOURCE LINES 10-11
 
 We need to import some functions
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-23
+.. GENERATED FROM PYTHON SOURCE LINES 11-21
 
 .. code-block:: default
 
@@ -63,12 +49,12 @@ We need to import some functions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-26
+.. GENERATED FROM PYTHON SOURCE LINES 22-24
 
 Let's assume we need only a small subset of electrodes for our work.
 We can print all available electrode names in ``eeg_positions``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-30
+.. GENERATED FROM PYTHON SOURCE LINES 24-28
 
 .. code-block:: default
 
@@ -442,7 +428,7 @@ We can print all available electrode names in ``eeg_positions``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-36
+.. GENERATED FROM PYTHON SOURCE LINES 29-34
 
 A keen eye may have identified some "odd" electrodes, that are not really part
 of the 10-20, 10-10, or 10-05 systems: ``'A1', 'A2', 'M1', 'M2'``
@@ -450,7 +436,7 @@ of the 10-20, 10-10, or 10-05 systems: ``'A1', 'A2', 'M1', 'M2'``
 These are supplied with ``eeg_positions`` for convenience as so-called "alias"
 positions. See below:
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-42
+.. GENERATED FROM PYTHON SOURCE LINES 34-40
 
 .. code-block:: default
 
@@ -478,7 +464,7 @@ positions. See below:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-52
+.. GENERATED FROM PYTHON SOURCE LINES 41-50
 
 We see that for example `A1` is mapped to a position near the left preauricular point
 (LPA). This position is meant to reflect that the A1 electrode is typically a clip-on
@@ -490,7 +476,7 @@ a study participant. Its position approximately coincides with the `TP9` positio
 **But now back to the topic: We want to get coordinates for a small subset of
 electrodes!**
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-62
+.. GENERATED FROM PYTHON SOURCE LINES 50-60
 
 .. code-block:: default
 
@@ -579,11 +565,11 @@ electrodes!**
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-64
+.. GENERATED FROM PYTHON SOURCE LINES 61-62
 
 Plot it, and see how close LPA and A1 (and RPA and A2) are in space.
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-69
+.. GENERATED FROM PYTHON SOURCE LINES 62-67
 
 .. code-block:: default
 

@@ -29,25 +29,11 @@ For more information, check out these MNE resources:
 
 .. currentmodule:: eeg_positions
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-16
-
-.. code-block:: default
-
-    # Copyright (c) 2018-2022, Stefan Appelhoff
-    # BSD-3-Clause
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 17-18
+.. GENERATED FROM PYTHON SOURCE LINES 15-16
 
 We start with imports.
 
-.. GENERATED FROM PYTHON SOURCE LINES 18-22
+.. GENERATED FROM PYTHON SOURCE LINES 16-20
 
 .. code-block:: default
 
@@ -62,11 +48,11 @@ We start with imports.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-24
+.. GENERATED FROM PYTHON SOURCE LINES 21-22
 
 Now we get the positions we want. Note the ``as_mne_montage=True`` argument.
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-30
+.. GENERATED FROM PYTHON SOURCE LINES 22-28
 
 .. code-block:: default
 
@@ -91,12 +77,12 @@ Now we get the positions we want. Note the ``as_mne_montage=True`` argument.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-33
+.. GENERATED FROM PYTHON SOURCE LINES 29-31
 
 Making use of the :class:`mne.channels.DigMontage` methods, we can visualize
 the electrode positions.
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-36
+.. GENERATED FROM PYTHON SOURCE LINES 31-34
 
 .. code-block:: default
 
@@ -126,11 +112,11 @@ the electrode positions.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 35-36
 
 Now let's have a look at plotting this in 3D.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-45
+.. GENERATED FROM PYTHON SOURCE LINES 36-43
 
 .. code-block:: default
 
@@ -163,7 +149,7 @@ Now let's have a look at plotting this in 3D.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 46-54
+.. GENERATED FROM PYTHON SOURCE LINES 44-52
 
 The above plot already looks useful, but you can make it even more useful if you run
 the code in an interactive session using the Matplotlib Qt backend, because then you
@@ -174,7 +160,7 @@ lying on the ``"Fpz-T8-Oz-T7"`` electrode contour line.
 So far, we only saw it for ``"Nz-T10-Iz-T9"``, which is the recommended
 default.
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-72
+.. GENERATED FROM PYTHON SOURCE LINES 52-70
 
 .. code-block:: default
 
