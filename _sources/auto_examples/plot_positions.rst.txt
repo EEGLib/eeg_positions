@@ -270,7 +270,7 @@ Now we specifiy individual colors using the ``scatter_kwargs``` argument. We cre
 list of 64 colors corresponding to our 64 coordinates (in the original order as
 provided by ``chans``):
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-99
+.. GENERATED FROM PYTHON SOURCE LINES 74-98
 
 .. code-block:: default
 
@@ -283,7 +283,6 @@ provided by ``chans``):
         + ["khaki"] * 3
     )
 
-    # sphinx_gallery_thumbnail_number = 3
     fig, ax = plot_coords(
         coords,
         scatter_kwargs={
