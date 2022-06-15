@@ -104,7 +104,7 @@
 <h1>eeg_positions.get_elec_coords<a class="headerlink" href="#eeg-positions-get-elec-coords" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="eeg_positions.get_elec_coords">
-<span class="sig-prename descclassname"><span class="pre">eeg_positions.</span></span><span class="sig-name descname"><span class="pre">get_elec_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1005'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elec_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_landmarks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2d'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_mne_montage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Nz-T10-Iz-T9'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/eeg_positions/compute.html#get_elec_coords"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eeg_positions.get_elec_coords" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">eeg_positions.</span></span><span class="sig-name descname"><span class="pre">get_elec_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1005'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elec_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_landmarks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2d'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_mne_montage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Nz-T10-Iz-T9'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/eeg_positions/compute.html#get_elec_coords"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eeg_positions.get_elec_coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get standard EEG electrode coordinates.</p>
 <p>Compute standard EEG electrode coordinates on a spherical head model.</p>
 <dl class="field-list">
@@ -164,11 +164,14 @@ as the equator, several electrodes may be drawn outside a circular
 head shape when projecting to 2D.
 Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;Nz-T10-Iz-T9&quot;</span></code>.</p>
 </dd>
+<dt><strong>sort</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.10)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Whether to sort the returned coordinates alphabetically. If <code class="docutils literal notranslate"><span class="pre">False</span></code> (default),
+preserve the order of <code class="docutils literal notranslate"><span class="pre">elec_names</span></code> if available.</p>
+</dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.5.0.dev0+953.g696e9bd04f)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> | <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
+<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.5.0.dev0+957.gf600fd4c2c)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> | <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
 Either returned as a pandas DataFrame object with the columns
 <code class="docutils literal notranslate"><span class="pre">&quot;label&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code>
 (only if <cite>dim</cite> is <code class="docutils literal notranslate"><span class="pre">&quot;3d&quot;</span></code>),
@@ -232,16 +235,16 @@ high-resolution EEG and ERP measurements. Clin Neurophysiol, 112:713-719, 2001.
 <p><span class="caption-text"><a class="reference internal" href="../auto_examples/use_elec_names.html#sphx-glr-auto-examples-use-elec-names-py"><span class="std std-ref">Get specific electrodes and use aliases</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Plot electrode positions"><figure class="align-default" id="id4">
-<img alt="Plot electrode positions" src="../_images/sphx_glr_plot_positions_thumb.png" />
-<figcaption>
-<p><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_positions.html#sphx-glr-auto-examples-plot-positions-py"><span class="std std-ref">Plot electrode positions</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</div><div class="sphx-glr-thumbcontainer" tooltip="For more information, check out these MNE resources:"><figure class="align-default" id="id5">
+</div><div class="sphx-glr-thumbcontainer" tooltip="For more information, check out these MNE resources:"><figure class="align-default" id="id4">
 <img alt="Use ``eeg_positions`` with MNE-Python" src="../_images/sphx_glr_use_mne_thumb.png" />
 <figcaption>
-<p><span class="caption-text"><a class="reference internal" href="../auto_examples/use_mne.html#sphx-glr-auto-examples-use-mne-py"><span class="std std-ref">Use eeg_positions with MNE-Python</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><a class="reference internal" href="../auto_examples/use_mne.html#sphx-glr-auto-examples-use-mne-py"><span class="std std-ref">Use eeg_positions with MNE-Python</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Plot electrode positions"><figure class="align-default" id="id5">
+<img alt="Plot electrode positions" src="../_images/sphx_glr_plot_positions_thumb.png" />
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_positions.html#sphx-glr-auto-examples-plot-positions-py"><span class="std std-ref">Plot electrode positions</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </div><div class="sphx-glr-clear"></div></section>
