@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>eeg_positions.get_elec_coords &#8212; eeg_positions 2.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -171,7 +171,7 @@ preserve the order of <code class="docutils literal notranslate"><span class="pr
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.5.0.dev0+1059.g231b9fad17)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> | <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
+<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.5.0.dev0+1217.g6e1a040142)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> | <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
 Either returned as a pandas DataFrame object with the columns
 <code class="docutils literal notranslate"><span class="pre">&quot;label&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code>
 (only if <cite>dim</cite> is <code class="docutils literal notranslate"><span class="pre">&quot;3d&quot;</span></code>),
@@ -229,25 +229,16 @@ high-resolution EEG and ERP measurements. Clin Neurophysiol, 112:713-719, 2001.
 
 <section id="examples-using-eeg-positions-get-elec-coords">
 <span id="sphx-glr-backreferences-eeg-positions-get-elec-coords"></span><h2>Examples using <code class="docutils literal notranslate"><span class="pre">eeg_positions.get_elec_coords</span></code><a class="headerlink" href="#examples-using-eeg-positions-get-elec-coords" title="Permalink to this heading">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="Get specific electrodes and use aliases"><figure class="align-default" id="id3">
-<img alt="Get specific electrodes and use aliases" src="../_images/sphx_glr_use_elec_names_thumb.png" />
-<figcaption>
-<p><span class="caption-text"><a class="reference internal" href="../auto_examples/use_elec_names.html#sphx-glr-auto-examples-use-elec-names-py"><span class="std std-ref">Get specific electrodes and use aliases</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</div><div class="sphx-glr-thumbcontainer" tooltip="For more information, check out these MNE resources:"><figure class="align-default" id="id4">
-<img alt="Use ``eeg_positions`` with MNE-Python" src="../_images/sphx_glr_use_mne_thumb.png" />
-<figcaption>
-<p><span class="caption-text"><a class="reference internal" href="../auto_examples/use_mne.html#sphx-glr-auto-examples-use-mne-py"><span class="std std-ref">Use eeg_positions with MNE-Python</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Plot electrode positions"><figure class="align-default" id="id5">
-<img alt="Plot electrode positions" src="../_images/sphx_glr_plot_positions_thumb.png" />
-<figcaption>
-<p><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_positions.html#sphx-glr-auto-examples-plot-positions-py"><span class="std std-ref">Plot electrode positions</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</div><div class="sphx-glr-clear"></div></section>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Get specific electrodes and use aliases"><img alt="Get specific electrodes and use aliases" src="../_images/sphx_glr_use_elec_names_thumb.png" />
+<p><a class="reference internal" href="../auto_examples/use_elec_names.html#sphx-glr-auto-examples-use-elec-names-py"><span class="std std-ref">Get specific electrodes and use aliases</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Get specific electrodes and use aliases</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="For more information, check out these MNE resources:"><img alt="Use ``eeg_positions`` with MNE-Python" src="../_images/sphx_glr_use_mne_thumb.png" />
+<p><a class="reference internal" href="../auto_examples/use_mne.html#sphx-glr-auto-examples-use-mne-py"><span class="std std-ref">Use eeg_positions with MNE-Python</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Use ``eeg_positions`` with MNE-Python</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Plot electrode positions"><img alt="Plot electrode positions" src="../_images/sphx_glr_plot_positions_thumb.png" />
+<p><a class="reference internal" href="../auto_examples/plot_positions.html#sphx-glr-auto-examples-plot-positions-py"><span class="std std-ref">Plot electrode positions</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Plot electrode positions</div>
+</div></div></div></section>
 </section>
 
 

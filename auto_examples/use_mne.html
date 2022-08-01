@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Use eeg_positions with MNE-Python &#8212; eeg_positions 2.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -120,7 +120,6 @@ to download the full example code</p>
 <span class="nb">print</span><span class="p">(</span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="mne.channels.DigMontage" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;DigMontage | 0 extras (headshape), 0 HPIs, 3 fiducials, 345 channels&gt;
 </pre></div>
 </div>
@@ -129,8 +128,7 @@ the electrode positions.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.plot" title="mne.channels.DigMontage.plot" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">plot</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../_images/sphx_glr_use_mne_001.png" srcset="../_images/sphx_glr_use_mne_001.png" alt="use mne" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=345, n_times=1
+<img src="../_images/sphx_glr_use_mne_001.png" srcset="../_images/sphx_glr_use_mne_001.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=345, n_times=1
     Range : 0 ... 0 =      0.000 ...     0.000 secs
 Ready.
 
@@ -145,8 +143,7 @@ Ready.
 <a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure.gca" title="matplotlib.figure.Figure.gca" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">gca</span></a><span class="p">()</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="n">azim</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">elev</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../_images/sphx_glr_use_mne_002.png" srcset="../_images/sphx_glr_use_mne_002.png" alt="use mne" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=71, n_times=1
+<img src="../_images/sphx_glr_use_mne_002.png" srcset="../_images/sphx_glr_use_mne_002.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=71, n_times=1
     Range : 0 ... 0 =      0.000 ...     0.000 secs
 Ready.
 </pre></div>
@@ -177,15 +174,14 @@ default.</p>
 <a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.plot" title="mne.channels.DigMontage.plot" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">sphere</span><span class="o">=</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">z</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">radius</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<img src="../_images/sphx_glr_use_mne_003.png" srcset="../_images/sphx_glr_use_mne_003.png" alt="use mne" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=21, n_times=1
+<img src="../_images/sphx_glr_use_mne_003.png" srcset="../_images/sphx_glr_use_mne_003.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=21, n_times=1
     Range : 0 ... 0 =      0.000 ...     0.000 secs
 Ready.
 
 &lt;Figure size 640x640 with 1 Axes&gt;
 </pre></div>
 </div>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-use-mne-py">
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-use-mne-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/4cdeb2769c457e0fde73ae67c4a20777/use_mne.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">use_mne.py</span></code></a></p>
 </div>
@@ -193,7 +189,6 @@ Ready.
 <p><a class="reference download internal" download="" href="../_downloads/42b408f6a930abf95fe80fc4e3aee92e/use_mne.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">use_mne.ipynb</span></code></a></p>
 </div>
 </div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </section>
 
 
