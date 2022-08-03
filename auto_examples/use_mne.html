@@ -108,9 +108,7 @@ to download the full example code</p>
 <li><p><a class="reference external" href="https://mne.tools/dev/auto_examples/visualization/plot_eeglab_head_sphere.html">https://mne.tools/dev/auto_examples/visualization/plot_eeglab_head_sphere.html</a></p></li>
 </ul>
 <p>We start with imports.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="kn">from</span> <span class="nn">eeg_positions</span> <span class="kn">import</span> <a href="../generated/eeg_positions.get_elec_coords.html#eeg_positions.get_elec_coords" title="eeg_positions.get_elec_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">get_elec_coords</span></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">eeg_positions</span> <span class="kn">import</span> <a href="../generated/eeg_positions.get_elec_coords.html#eeg_positions.get_elec_coords" title="eeg_positions.get_elec_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">get_elec_coords</span></a>
 </pre></div>
 </div>
 <p>Now we get the positions we want. Note the <code class="docutils literal notranslate"><span class="pre">as_mne_montage=True</span></code> argument.</p>
@@ -128,11 +126,7 @@ the electrode positions.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.plot" title="mne.channels.DigMontage.plot" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">plot</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../_images/sphx_glr_use_mne_001.png" srcset="../_images/sphx_glr_use_mne_001.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=345, n_times=1
-    Range : 0 ... 0 =      0.000 ...     0.000 secs
-Ready.
-
-&lt;Figure size 640x640 with 1 Axes&gt;
+<img src="../_images/sphx_glr_use_mne_001.png" srcset="../_images/sphx_glr_use_mne_001.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x640 with 1 Axes&gt;
 </pre></div>
 </div>
 <p>Now let’s have a look at plotting this in 3D.</p>
@@ -143,12 +137,7 @@ Ready.
 <a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure.gca" title="matplotlib.figure.Figure.gca" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">gca</span></a><span class="p">()</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="n">azim</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">elev</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../_images/sphx_glr_use_mne_002.png" srcset="../_images/sphx_glr_use_mne_002.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=71, n_times=1
-    Range : 0 ... 0 =      0.000 ...     0.000 secs
-Ready.
-</pre></div>
-</div>
-<p>The above plot already looks useful, but you can make it even more useful if you run
+<img src="../_images/sphx_glr_use_mne_002.png" srcset="../_images/sphx_glr_use_mne_002.png" alt="use mne" class = "sphx-glr-single-img"/><p>The above plot already looks useful, but you can make it even more useful if you run
 the code in an interactive session using the Matplotlib Qt backend, because then you
 can zoom and pan the plot.</p>
 <p>Finally, let’s make a plot with the equator of the spherical head model
@@ -160,25 +149,12 @@ default.</p>
 
 <span class="c1"># MNE always scales the electrode positions as if the equator were on the</span>
 <span class="c1"># &quot;Nz-T10-Iz-T9&quot; contour.</span>
-<span class="c1"># We need to counteract this with a few computations</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">chs</span></a> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Oz&quot;</span><span class="p">,</span> <span class="s2">&quot;Fpz&quot;</span><span class="p">,</span> <span class="s2">&quot;T7&quot;</span><span class="p">,</span> <span class="s2">&quot;T8&quot;</span><span class="p">]</span>
-<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pos</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.stack.html#numpy.stack" title="numpy.stack" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">stack</span></a><span class="p">([</span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.get_positions" title="mne.channels.DigMontage.get_positions" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">get_positions</span></a><span class="p">()[</span><span class="s2">&quot;ch_pos&quot;</span><span class="p">][</span><span class="n">ch</span><span class="p">]</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">chs</span></a><span class="p">])</span>
-
-<a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">radius</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">abs</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pos</span></a><span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pos</span></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-<a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pos</span></a><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">z</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pos</span></a><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-
-<a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.plot" title="mne.channels.DigMontage.plot" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">sphere</span><span class="o">=</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">z</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">radius</span></a><span class="p">))</span>
+<span class="c1"># We need to counteract this by setting ``sphere=&quot;eeglab&quot;``, which scales</span>
+<span class="c1"># electrode positions as if the equator were on the &quot;Fpz-T8-Oz-T7&quot; contour.</span>
+<a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.plot" title="mne.channels.DigMontage.plot" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">sphere</span><span class="o">=</span><span class="s2">&quot;eeglab&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../_images/sphx_glr_use_mne_003.png" srcset="../_images/sphx_glr_use_mne_003.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=21, n_times=1
-    Range : 0 ... 0 =      0.000 ...     0.000 secs
-Ready.
-
-&lt;Figure size 640x640 with 1 Axes&gt;
+<img src="../_images/sphx_glr_use_mne_003.png" srcset="../_images/sphx_glr_use_mne_003.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x640 with 1 Axes&gt;
 </pre></div>
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-use-mne-py">
