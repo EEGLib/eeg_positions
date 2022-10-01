@@ -19,6 +19,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -59,6 +60,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="eeg_positions.find_point_at_fraction.html">eeg_positions.find_point_at_fraction</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">eeg_positions.get_elec_coords</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eeg_positions.get_elec_coords"><code class="docutils literal notranslate"><span class="pre">get_elec_coords()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#examples-using-eeg-positions-get-elec-coords">Examples using <code class="docutils literal notranslate"><span class="pre">eeg_positions.get_elec_coords</span></code></a></li>
 </ul>
 </li>
@@ -171,7 +173,7 @@ preserve the order of <code class="docutils literal notranslate"><span class="pr
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.6.0.dev0+40.g6165b6495f)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> | <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
+<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.6.0.dev0+248.gd76b9f2cd0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> | <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
 Either returned as a pandas DataFrame object with the columns
 <code class="docutils literal notranslate"><span class="pre">&quot;label&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code>
 (only if <cite>dim</cite> is <code class="docutils literal notranslate"><span class="pre">&quot;3d&quot;</span></code>),
