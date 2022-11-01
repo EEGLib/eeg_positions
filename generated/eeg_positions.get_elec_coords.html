@@ -121,7 +121,7 @@ the <cite>elec_names</cite> parameter, including some electrodes that are not
 typically included in the <code class="docutils literal notranslate"><span class="pre">&quot;1005&quot;</span></code> system.
 If <cite>elec_names</cite> is defined, <cite>system</cite> is ignored.</p>
 </dd>
-<dt><strong>elec_names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>List of electrode names to return coordinates of.
+<dt><strong>elec_names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>List of electrode names to return coordinates of.
 All electrodes that are part of the <code class="docutils literal notranslate"><span class="pre">&quot;1005&quot;</span></code> system are available,
 and this includes by definition all electrodes of the
 <code class="docutils literal notranslate"><span class="pre">&quot;1010&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;1020&quot;</span></code> systems.
@@ -131,7 +131,7 @@ Use <a class="reference internal" href="eeg_positions.get_available_elec_names.h
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all electrode specified in <cite>system</cite> are returned.
 Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
-<dt><strong>drop_landmarks</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.10)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, drop anatomical landmarks (NAS, LPA, RPA)
+<dt><strong>drop_landmarks</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, drop anatomical landmarks (NAS, LPA, RPA)
 from the coordinate data before returning <cite>coords</cite>. Dropping can be helpful,
 because in our model NAS, LPA, and RPA coincide with Nz, T9, and T10
 respectively.
@@ -142,7 +142,7 @@ selected, the coordinates are first computed as 3D, and then projected
 to 2D using a stereographic projection.
 Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;2d&quot;</span></code>.</p>
 </dd>
-<dt><strong>as_mne_montage</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.10)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, return <cite>coords</cite> as an <code class="docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code> object. In that
+<dt><strong>as_mne_montage</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, return <cite>coords</cite> as an <code class="docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code> object. In that
 case, the <cite>drop_landmarks</cite> and <cite>dim</cite> parameters are set to <code class="docutils literal notranslate"><span class="pre">False</span></code> and
 <code class="docutils literal notranslate"><span class="pre">&quot;3d&quot;</span></code> respectively, ignoring the values that were actually passed.
 This is done because the anatomical landmarks are needed to “fit” the
@@ -166,14 +166,14 @@ as the equator, several electrodes may be drawn outside a circular
 head shape when projecting to 2D.
 Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;Nz-T10-Iz-T9&quot;</span></code>.</p>
 </dd>
-<dt><strong>sort</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.10)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Whether to sort the returned coordinates alphabetically. If <code class="docutils literal notranslate"><span class="pre">False</span></code> (default),
+<dt><strong>sort</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Whether to sort the returned coordinates alphabetically. If <code class="docutils literal notranslate"><span class="pre">False</span></code> (default),
 preserve the order of <code class="docutils literal notranslate"><span class="pre">elec_names</span></code> if available.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.6.0.dev0+248.gd76b9f2cd0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> | <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
+<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.0.0.dev0+504.g735c6b08b5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> | <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
 Either returned as a pandas DataFrame object with the columns
 <code class="docutils literal notranslate"><span class="pre">&quot;label&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code>
 (only if <cite>dim</cite> is <code class="docutils literal notranslate"><span class="pre">&quot;3d&quot;</span></code>),
