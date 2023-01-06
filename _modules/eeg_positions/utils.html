@@ -91,7 +91,7 @@
 
 
 <div class="viewcode-block" id="find_point_at_fraction"><a class="viewcode-back" href="../../generated/eeg_positions.find_point_at_fraction.html#eeg_positions.find_point_at_fraction">[docs]</a><span class="k">def</span> <span class="nf">find_point_at_fraction</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">,</span> <span class="n">frac</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Find a point on an arc spanned by three points.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find a point on an arc spanned by three points.</span>
 
 <span class="sd">    Given three points `p1`, `p2` and `p3` on a sphere with origin (0, 0, 0),</span>
 <span class="sd">    find the coordinates of a `point` at a fraction `frac` of the overall</span>
@@ -222,7 +222,7 @@
 
 
 <span class="k">def</span> <span class="nf">_add_points_along_contour</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">contour</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Compute points along `contour` and add them to `df`.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute points along `contour` and add them to `df`.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -266,7 +266,7 @@
 
 
 <span class="k">def</span> <span class="nf">_append_ps_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ps</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Add points `ps` to data frame `df`.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add points `ps` to data frame `df`.</span>
 
 <span class="sd">    This function removes duplicates from `df`, always keeping</span>
 <span class="sd">    the first entry it finds.</span>
@@ -298,7 +298,7 @@
 
 <span class="c1"># Convenient helper function to access xyz coordinates from df</span>
 <span class="k">def</span> <span class="nf">_get_xyz</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Get xyz coordinates from a pandas data frame.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get xyz coordinates from a pandas data frame.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -332,7 +332,7 @@
 
 
 <span class="k">def</span> <span class="nf">_get_coords_on_circle</span><span class="p">(</span><span class="n">cx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cy</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">180</span> <span class="o">/</span> <span class="mi">20</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Get the cartesian coordinates [x,y] for a number of points on a circle.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the cartesian coordinates [x,y] for a number of points on a circle.</span>
 
 <span class="sd">    Assume that top of circle is 0 degrees.</span>
 
@@ -372,7 +372,7 @@
 
 
 <span class="k">def</span> <span class="nf">_stereographic_projection</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculate the stereographic projection.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the stereographic projection.</span>
 
 <span class="sd">    Given a unit sphere with radius ``r = 1`` and center at</span>
 <span class="sd">    The origin. Project the point ``p = (x, y, z)`` from the</span>
