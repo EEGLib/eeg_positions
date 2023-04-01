@@ -22,7 +22,7 @@ Have a look at some common use cases of :mod:`eeg_positions`.
 .. only:: html
 
   .. image:: /auto_examples/images/thumb/sphx_glr_use_elec_names_thumb.png
-    :alt: Get specific electrodes and use aliases
+    :alt:
 
   :ref:`sphx_glr_auto_examples_use_elec_names.py`
 
@@ -39,13 +39,13 @@ Have a look at some common use cases of :mod:`eeg_positions`.
 .. only:: html
 
   .. image:: /auto_examples/images/thumb/sphx_glr_use_mne_thumb.png
-    :alt: Use ``eeg_positions`` with MNE-Python
+    :alt:
 
   :ref:`sphx_glr_auto_examples_use_mne.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Use ``eeg_positions`` with MNE-Python</div>
+      <div class="sphx-glr-thumbnail-title">Use eeg_positions with MNE-Python</div>
     </div>
 
 
@@ -56,7 +56,7 @@ Have a look at some common use cases of :mod:`eeg_positions`.
 .. only:: html
 
   .. image:: /auto_examples/images/thumb/sphx_glr_plot_positions_thumb.png
-    :alt: Plot electrode positions
+    :alt:
 
   :ref:`sphx_glr_auto_examples_plot_positions.py`
 
