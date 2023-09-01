@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>eeg_positions.plot_coords &#8212; eeg_positions 2.2.0.dev0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b3523f8e" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=ff608945" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=e5fbc548" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=49226ef7"></script>
+    <script src="../_static/documentation_options.js?v=dc4a309c"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=ccdb6887"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -99,15 +99,15 @@
           <div class="body" role="main">
             
   <section id="eeg-positions-plot-coords">
-<h1>eeg_positions.plot_coords<a class="headerlink" href="#eeg-positions-plot-coords" title="Permalink to this heading">¶</a></h1>
+<h1>eeg_positions.plot_coords<a class="headerlink" href="#eeg-positions-plot-coords" title="Link to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="eeg_positions.plot_coords">
-<span class="sig-prename descclassname"><span class="pre">eeg_positions.</span></span><span class="sig-name descname"><span class="pre">plot_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scatter_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/eeg_positions/viz.html#plot_coords"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eeg_positions.plot_coords" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">eeg_positions.</span></span><span class="sig-name descname"><span class="pre">plot_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scatter_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/eeg_positions/viz.html#plot_coords"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eeg_positions.plot_coords" title="Link to this definition">¶</a></dt>
 <dd><p>Plot standard EEG electrode coordinates.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.1.0.dev0+1344.g435762115d)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
+<dt><strong>coords</strong><span class="classifier"><a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.0dev0+152.g75781c26d1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a></span></dt><dd><p>The standard EEG electrode coordinates as computed on a sphere.
 A pandas DataFrame object with the columns <code class="docutils literal notranslate"><span class="pre">&quot;label&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, and optionally <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code>.</p>
 </dd>
@@ -132,7 +132,7 @@ or its 3D variant, depending on the dimensions of <cite>coords</cite>.</p>
 </dd></dl>
 
 <section id="examples-using-eeg-positions-plot-coords">
-<span id="sphx-glr-backreferences-eeg-positions-plot-coords"></span><h2>Examples using <code class="docutils literal notranslate"><span class="pre">eeg_positions.plot_coords</span></code><a class="headerlink" href="#examples-using-eeg-positions-plot-coords" title="Permalink to this heading">¶</a></h2>
+<span id="sphx-glr-backreferences-eeg-positions-plot-coords"></span><h2>Examples using <code class="docutils literal notranslate"><span class="pre">eeg_positions.plot_coords</span></code><a class="headerlink" href="#examples-using-eeg-positions-plot-coords" title="Link to this heading">¶</a></h2>
 <div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Get specific electrodes and use aliases"><img alt="" src="../_images/sphx_glr_use_elec_names_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/use_elec_names.html#sphx-glr-auto-examples-use-elec-names-py"><span class="std std-ref">Get specific electrodes and use aliases</span></a></p>
   <div class="sphx-glr-thumbnail-title">Get specific electrodes and use aliases</div>
