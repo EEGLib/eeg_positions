@@ -1,0 +1,19 @@
+version: "2.1"
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004:202111-01
+    steps:
+      - run:
+        name: do nothing
+        command: |
+          sleep 1
+
+workflows:
+  build-workflow:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: /.*/
