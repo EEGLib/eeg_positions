@@ -35,7 +35,7 @@ We start with imports.
 
 .. GENERATED FROM PYTHON SOURCE LINES 16-18
 
-.. code-block:: default
+.. code-block:: Python
 
     from eeg_positions import get_elec_coords
 
@@ -52,7 +52,7 @@ Now we get the positions we want. Note the ``as_mne_montage=True`` argument.
 
 .. GENERATED FROM PYTHON SOURCE LINES 20-26
 
-.. code-block:: default
+.. code-block:: Python
 
 
     coords = get_elec_coords(as_mne_montage=True)
@@ -80,7 +80,7 @@ the electrode positions.
 
 .. GENERATED FROM PYTHON SOURCE LINES 29-32
 
-.. code-block:: default
+.. code-block:: Python
 
 
     coords.plot()
@@ -109,7 +109,7 @@ Now let's have a look at plotting this in 3D.
 
 .. GENERATED FROM PYTHON SOURCE LINES 34-41
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # but let's pick a system that has fewer electrodes
@@ -143,7 +143,7 @@ default.
 
 .. GENERATED FROM PYTHON SOURCE LINES 50-59
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # We are also picking the 10-20 system now
@@ -179,13 +179,10 @@ default.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: use_mne.ipynb <use_mne.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: use_mne.py <use_mne.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: use_mne.ipynb <use_mne.ipynb>`

@@ -105,11 +105,11 @@ to download the full example code</p>
 <li><p><a class="reference external" href="https://mne.tools/dev/auto_examples/visualization/plot_eeglab_head_sphere.html">https://mne.tools/dev/auto_examples/visualization/plot_eeglab_head_sphere.html</a></p></li>
 </ul>
 <p>We start with imports.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">eeg_positions</span> <span class="kn">import</span> <a href="../generated/eeg_positions.get_elec_coords.html#eeg_positions.get_elec_coords" title="eeg_positions.get_elec_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">get_elec_coords</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">eeg_positions</span> <span class="kn">import</span> <a href="../generated/eeg_positions.get_elec_coords.html#eeg_positions.get_elec_coords" title="eeg_positions.get_elec_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">get_elec_coords</span></a>
 </pre></div>
 </div>
 <p>Now we get the positions we want. Note the <code class="docutils literal notranslate"><span class="pre">as_mne_montage=True</span></code> argument.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="mne.channels.DigMontage" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a> <span class="o">=</span> <a href="../generated/eeg_positions.get_elec_coords.html#eeg_positions.get_elec_coords" title="eeg_positions.get_elec_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">get_elec_coords</span></a><span class="p">(</span><span class="n">as_mne_montage</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="mne.channels.DigMontage" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a> <span class="o">=</span> <a href="../generated/eeg_positions.get_elec_coords.html#eeg_positions.get_elec_coords" title="eeg_positions.get_elec_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">get_elec_coords</span></a><span class="p">(</span><span class="n">as_mne_montage</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># `coords` is an MNE-Python DigMontage object.</span>
 <span class="nb">print</span><span class="p">(</span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="mne.channels.DigMontage" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">)</span>
@@ -118,16 +118,16 @@ to download the full example code</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;DigMontage | 0 extras (headshape), 0 HPIs, 3 fiducials, 345 channels&gt;
 </pre></div>
 </div>
-<p>Making use of the <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a> methods, we can visualize
+<p>Making use of the <a class="reference external" href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="(in MNE v1.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.channels.DigMontage</span></code></a> methods, we can visualize
 the electrode positions.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.plot" title="mne.channels.DigMontage.plot" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">plot</span></a><span class="p">()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.plot" title="mne.channels.DigMontage.plot" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">plot</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../_images/sphx_glr_use_mne_001.png" srcset="../_images/sphx_glr_use_mne_001.png" alt="use mne" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x640 with 1 Axes&gt;
 </pre></div>
 </div>
 <p>Now let’s have a look at plotting this in 3D.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># but let&#39;s pick a system that has fewer electrodes</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># but let&#39;s pick a system that has fewer electrodes</span>
 <a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="mne.channels.DigMontage" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a> <span class="o">=</span> <a href="../generated/eeg_positions.get_elec_coords.html#eeg_positions.get_elec_coords" title="eeg_positions.get_elec_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">get_elec_coords</span></a><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="s2">&quot;1010&quot;</span><span class="p">,</span> <span class="n">as_mne_montage</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a> <span class="o">=</span> <a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage.plot" title="mne.channels.DigMontage.plot" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-method"><span class="n">coords</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;3d&quot;</span><span class="p">)</span>
@@ -141,7 +141,7 @@ can zoom and pan the plot.</p>
 lying on the <code class="docutils literal notranslate"><span class="pre">&quot;Fpz-T8-Oz-T7&quot;</span></code> electrode contour line.
 So far, we only saw it for <code class="docutils literal notranslate"><span class="pre">&quot;Nz-T10-Iz-T9&quot;</span></code>, which is the recommended
 default.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># We are also picking the 10-20 system now</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># We are also picking the 10-20 system now</span>
 <a href="https://mne.tools/dev/generated/mne.channels.DigMontage.html#mne.channels.DigMontage" title="mne.channels.DigMontage" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a> <span class="o">=</span> <a href="../generated/eeg_positions.get_elec_coords.html#eeg_positions.get_elec_coords" title="eeg_positions.get_elec_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">get_elec_coords</span></a><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="s2">&quot;1020&quot;</span><span class="p">,</span> <span class="n">as_mne_montage</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">equator</span><span class="o">=</span><span class="s2">&quot;Fpz-T8-Oz-T7&quot;</span><span class="p">)</span>
 
 <span class="c1"># MNE always scales the electrode positions as if the equator were on the</span>
@@ -155,11 +155,11 @@ default.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-use-mne-py">
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/4cdeb2769c457e0fde73ae67c4a20777/use_mne.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">use_mne.py</span></code></a></p>
-</div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/42b408f6a930abf95fe80fc4e3aee92e/use_mne.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">use_mne.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/4cdeb2769c457e0fde73ae67c4a20777/use_mne.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">use_mne.py</span></code></a></p>
 </div>
 </div>
 </section>

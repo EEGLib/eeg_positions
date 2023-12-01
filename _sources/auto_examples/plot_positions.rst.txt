@@ -30,7 +30,7 @@ We need to import some functions.
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-14
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from eeg_positions import get_elec_coords, plot_coords
@@ -48,7 +48,7 @@ Let's start with the basic 10-20 system in two dimensions:
 
 .. GENERATED FROM PYTHON SOURCE LINES 16-22
 
-.. code-block:: default
+.. code-block:: Python
 
 
     coords = get_elec_coords(
@@ -69,7 +69,7 @@ This function returns a ``pandas.DataFrame`` object:
 
 .. GENERATED FROM PYTHON SOURCE LINES 24-27
 
-.. code-block:: default
+.. code-block:: Python
 
 
     coords.head()
@@ -151,7 +151,7 @@ the color of the electrodes and the text annotations.
 
 .. GENERATED FROM PYTHON SOURCE LINES 31-38
 
-.. code-block:: default
+.. code-block:: Python
 
 
     fig, ax = plot_coords(
@@ -185,7 +185,7 @@ these by passing ``drop_landmarks=True`` to :func:`get_elec_coords`:
 
 .. GENERATED FROM PYTHON SOURCE LINES 41-54
 
-.. code-block:: default
+.. code-block:: Python
 
 
     coords = get_elec_coords(
@@ -226,7 +226,7 @@ system):
 
 .. GENERATED FROM PYTHON SOURCE LINES 58-64
 
-.. code-block:: default
+.. code-block:: Python
 
 
     chans = """Fp1 AF7 AF3 F1 F3 F5 F7 Fp2 AF8 AF4 F2 F4 F6 F8 FT7 FC5 FC3
@@ -248,7 +248,7 @@ visualize with different colors. Let's get their coordinates first:
 
 .. GENERATED FROM PYTHON SOURCE LINES 67-70
 
-.. code-block:: default
+.. code-block:: Python
 
 
     coords = get_elec_coords(elec_names=chans)
@@ -268,7 +268,7 @@ provided by ``chans``):
 
 .. GENERATED FROM PYTHON SOURCE LINES 74-98
 
-.. code-block:: default
+.. code-block:: Python
 
 
     colors = (
@@ -312,7 +312,7 @@ We can also plot in 3D. Let's pick a system with more electrodes now:
 
 .. GENERATED FROM PYTHON SOURCE LINES 101-112
 
-.. code-block:: default
+.. code-block:: Python
 
 
     coords = get_elec_coords(
@@ -356,13 +356,10 @@ freely view the 3D plot and rotate the camera.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_positions.ipynb <plot_positions.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_positions.py <plot_positions.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_positions.ipynb <plot_positions.ipynb>`

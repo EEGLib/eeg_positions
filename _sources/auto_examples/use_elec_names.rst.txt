@@ -30,7 +30,7 @@ We need to import some functions
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-21
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from pprint import pprint
@@ -56,7 +56,7 @@ We can print all available electrode names in ``eeg_positions``.
 
 .. GENERATED FROM PYTHON SOURCE LINES 24-28
 
-.. code-block:: default
+.. code-block:: Python
 
 
     elec_names = get_available_elec_names()
@@ -436,7 +436,7 @@ positions. See below:
 
 .. GENERATED FROM PYTHON SOURCE LINES 34-40
 
-.. code-block:: default
+.. code-block:: Python
 
 
 
@@ -474,7 +474,7 @@ electrodes!**
 
 .. GENERATED FROM PYTHON SOURCE LINES 50-60
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Just use `elec_names`
@@ -567,7 +567,7 @@ Plot it, and see how close LPA and A1 (and RPA and A2) are in space.
 
 .. GENERATED FROM PYTHON SOURCE LINES 62-67
 
-.. code-block:: default
+.. code-block:: Python
 
 
     fig, ax = plot_coords(coords, text_kwargs=dict(fontsize=10))
@@ -599,13 +599,10 @@ Plot it, and see how close LPA and A1 (and RPA and A2) are in space.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: use_elec_names.ipynb <use_elec_names.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: use_elec_names.py <use_elec_names.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: use_elec_names.ipynb <use_elec_names.ipynb>`
