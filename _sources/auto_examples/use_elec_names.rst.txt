@@ -521,37 +521,37 @@ electrodes!**
       <tbody>
         <tr>
           <th>0</th>
-          <td>A1</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-        </tr>
-        <tr>
-          <th>1</th>
-          <td>A2</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-        </tr>
-        <tr>
-          <th>2</th>
           <td>FC3</td>
           <td>-0.5547</td>
           <td>0.3048</td>
           <td>0.7742</td>
         </tr>
         <tr>
-          <th>3</th>
+          <th>1</th>
           <td>CP4</td>
           <td>0.5547</td>
           <td>-0.3048</td>
           <td>0.7742</td>
         </tr>
         <tr>
-          <th>4</th>
+          <th>2</th>
           <td>M1</td>
           <td>-0.9511</td>
           <td>-0.3090</td>
+          <td>0.0000</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>LPA</td>
+          <td>-1.0000</td>
+          <td>0.0000</td>
+          <td>0.0000</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>RPA</td>
+          <td>1.0000</td>
+          <td>0.0000</td>
           <td>0.0000</td>
         </tr>
       </tbody>
@@ -606,3 +606,7 @@ Plot it, and see how close LPA and A1 (and RPA and A2) are in space.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: use_elec_names.py <use_elec_names.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: use_elec_names.zip <use_elec_names.zip>`

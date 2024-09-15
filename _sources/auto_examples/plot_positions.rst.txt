@@ -363,3 +363,7 @@ freely view the 3D plot and rotate the camera.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_positions.py <plot_positions.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_positions.zip <plot_positions.zip>`

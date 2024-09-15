@@ -186,3 +186,7 @@ default.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: use_mne.py <use_mne.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: use_mne.zip <use_mne.zip>`

@@ -1,6 +1,0 @@
-.coverage
-tests/**
-coverage.xml
-docs/**
-sg_execution_times.rst
-eeg_positions/**

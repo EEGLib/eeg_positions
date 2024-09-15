@@ -5,15 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Plot electrode positions &#8212; eeg_positions 2.2.0.dev0 documentation</title>
+    <title>Plot electrode positions &#8212; eeg_positions 2.2.0.dev12+g2b723c9 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
-    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=0c7a806f" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=c058f7c8" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=5663616e" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <script src="../_static/documentation_options.js?v=dc4a309c"></script>
+    <script src="../_static/documentation_options.js?v=f6458888"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -31,7 +32,7 @@
   </head><body>
   <div class="document">
     
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="../index.html">eeg_positions</a></h1>
 
@@ -176,7 +177,7 @@ to download the full example code.</p>
 <br /><p>Now let’s plot these coordinates.
 We can supply some style arguments to <a class="reference internal" href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords"><code class="xref py py-func docutils literal notranslate"><span class="pre">eeg_positions.plot_coords()</span></code></a> to control
 the color of the electrodes and the text annotations.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">plot_coords</span></a><span class="p">(</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="mpl_toolkits.mplot3d.axes3d.Axes3D" class="sphx-glr-backref-module-mpl_toolkits-mplot3d-axes3d sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">plot_coords</span></a><span class="p">(</span>
     <a href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.DataFrame" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">,</span> <span class="n">scatter_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;g&quot;</span><span class="p">},</span> <span class="n">text_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
 <span class="p">)</span>
 
@@ -194,7 +195,7 @@ these by passing <code class="docutils literal notranslate"><span class="pre">dr
     <span class="n">dim</span><span class="o">=</span><span class="s2">&quot;2d&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">plot_coords</span></a><span class="p">(</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="mpl_toolkits.mplot3d.axes3d.Axes3D" class="sphx-glr-backref-module-mpl_toolkits-mplot3d-axes3d sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">plot_coords</span></a><span class="p">(</span>
     <a href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.DataFrame" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">,</span> <span class="n">scatter_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;g&quot;</span><span class="p">},</span> <span class="n">text_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
 <span class="p">)</span>
 
@@ -229,7 +230,7 @@ provided by <code class="docutils literal notranslate"><span class="pre">chans</
     <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;khaki&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
 <span class="p">)</span>
 
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">plot_coords</span></a><span class="p">(</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="mpl_toolkits.mplot3d.axes3d.Axes3D" class="sphx-glr-backref-module-mpl_toolkits-mplot3d-axes3d sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">plot_coords</span></a><span class="p">(</span>
     <a href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.DataFrame" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">,</span>
     <span class="n">scatter_kwargs</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>  <span class="c1"># electrode size</span>
@@ -252,7 +253,7 @@ provided by <code class="docutils literal notranslate"><span class="pre">chans</
     <span class="n">dim</span><span class="o">=</span><span class="s2">&quot;3d&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">plot_coords</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.DataFrame" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">,</span> <span class="n">text_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">7</span><span class="p">))</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="mpl_toolkits.mplot3d.axes3d.Axes3D" class="sphx-glr-backref-module-mpl_toolkits-mplot3d-axes3d sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="../generated/eeg_positions.plot_coords.html#eeg_positions.plot_coords" title="eeg_positions.plot_coords" class="sphx-glr-backref-module-eeg_positions sphx-glr-backref-type-py-function"><span class="n">plot_coords</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.DataFrame" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">,</span> <span class="n">text_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">7</span><span class="p">))</span>
 
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a>
 </pre></div>
@@ -270,6 +271,9 @@ freely view the 3D plot and rotate the camera.</p>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/56d919a2aa53c6c1c1b2fca840e1e672/plot_positions.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_positions.py</span></code></a></p>
 </div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/d08a6644189d4c3b923edf0d00993fd8/plot_positions.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_positions.zip</span></code></a></p>
+</div>
 </div>
 </section>
 
@@ -281,7 +285,7 @@ freely view the 3D plot and rotate the camera.</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &#169;2018-2024, Stefan Appelhoff et al. (see <a href='https://github.com/sappelhoff/eeg_positions/blob/main/CITATION.cff'>CITATION.cff</a>).
+      &#169;2018, Stefan Appelhoff et al. (see <a href='https://github.com/sappelhoff/eeg_positions/blob/main/CITATION.cff'>CITATION.cff</a>). Last updated 2024-09-15T18:53:20.975571.
       
       |
       <a href="../_sources/auto_examples/plot_positions.rst.txt"
